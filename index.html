@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarte</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+     <h1>busca de CEP</h1>
+     <p>pesquisar endereço pelo CEP</p>
+
+      <div class="search-row">
+        <input
+          type="text"
+          id="cepInput"
+          maxlength="9"
+          placeholder="Digite o CEP ex: 01001-000"
+        />
+        <button onclick="buscarCEP()">Buscar</button>
+      </div>
+
+      <div class="msg msg-vazio" id="msgVazio" style="display:none">
+        Por favor, informe um CEP
+      </div>
+
+      <div class="msg msg-erro" id="msgErro" style="display:none">
+        <span id="msgErroText">CEP não encontrado</span>
+      </div>
+
+      <div class="resultado" id="resultado" style="display:none">
+        <p><strong>CEP:</strong> <span id="cepFormatado"></span></p>
+        <p><strong>Rua:</strong> <span id="rua"></span></p>
+        <p><strong>Bairro:</strong> <span id="bairro"></span></p>
+        <p><strong>Cidade:</strong> <span id="cidade"></span></p>
+        <p><strong>Estado:</strong> <span id="estado"></span></p>
+        <p><strong>DDD:</strong> <span id="ddd"></span></p>
+        <p><strong>IBGE:</strong> <span id="ibge"></span></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
